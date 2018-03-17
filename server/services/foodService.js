@@ -10,15 +10,6 @@ module.exports.foodItemConstructor = async function(json){
 
     try {
 
-        async function Item(json){
-            this.name = json.name,
-            this.quantity = json.quantity
-        }
-        let item  = await new Ttem(json);
-
-
-        console.log(item);
-        return item;
     
     } catch(error) {
         console.log(error); 

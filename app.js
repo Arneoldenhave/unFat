@@ -26,10 +26,11 @@ app.use(logger('dev'));
 //routes
 let index = require('./server/routes/index');
 let foods = require('./server/routes/foodRouter');
+let users = require('./server/routes/userRouter');
 
 app.use('/', index);
 app.use('/foods', foods);
-
+app.use('/users', users);
 
 
 

@@ -4,16 +4,14 @@ const async = require('async');
 const FoodItem = require('../schemas/foodItem');
 
 
-
-
-
-
-
 module.exports.createFoodItem = function(json, callback){
 
     async function create(json) {
         try {
-            let item = await FoodItem.FoodItem(json);
+
+            let item = await new FoodItem.FoodItem({
+                
+            });
             return item;
         } catch(error){
             console.log(error);
@@ -28,7 +26,6 @@ module.exports.createFoodItem = function(json, callback){
         callback(500, {"Error":"Internal server error"});
     })
 }
-
 
 /**
  * Add a foodItem to database
@@ -63,5 +60,4 @@ module.exports.constructFoodItem = function(json, callback) {
         })
 
 };
-
 
